@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title>Login</title>
+    <link rel="icon" type="image/x-icon" href="/Images/loginicon.png" class="back-logo"> 
+    <link rel = "stylesheet" href = "/css/index.css">
+    <script type="module" src="/js/login.js"></script>
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="login-box">
+        <img src="/Images/login_logo.png" class="login-logo">
+        <h1 class="login-head">Login Here</h1>
+        <div class="login-form" id="login">
+            <div class="login-error">
+                <p id="login-error-message"></p>
+            </div>
+                <div class="username-input-form">
+                    <input type="username" id="username" class="username" name="username" placeholder="Email.." required>
+                </div>
+                <div class="password-input-form">
+                    <input type="password" id="password" class="password" name="password" placeholder="Password.." required>
+                    <img src="/Images/eye-close.png" class="eye-button" id="eye-button">
+                </div>
+                <div class="login-button-link">
+                    <input id="login-button" value="login" type="submit" required>
+                </div>
+            <div class="Forgot-password-form">
+                <a id="Forgot-password" href="/user/reset">Forgot Password?</a><br>
+            </div>
+            <div class="CreateNewAccount">
+                <a id="CreatesNewAccount" href="/user/signup">Create a New Account?</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
