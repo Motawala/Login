@@ -3,7 +3,7 @@ const isAuth = async (req, res, next) => {
       next();
     } else {
       req.session.error = "You have to Login first";
-      return res.redirect("/user/loginPage");
+      return res.redirect("/dashboard");
     }
 };
 

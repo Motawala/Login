@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router();
 const {signup, login} = require('../controllers/user')
+const {isAuth} = require('../middleware/isAuth')
 
 router.post('/create', signup)
 router.post('/login', login)
@@ -39,7 +40,7 @@ router.get('/signup', function(req,res){
 })
 
 
-router.get('/home', function(req,res){
+router.get('/home', isAuth, function(req,res){
     try{
         res.render('home',{title:'Home Page'})
     }catch(err){
