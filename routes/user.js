@@ -1,10 +1,11 @@
 const express = require('express')
 const router = express.Router();
-const {signup, login} = require('../controllers/user')
+const {signup, login, logout} = require('../controllers/user')
 const {isAuth} = require('../middleware/isAuth')
 
 router.post('/create', signup)
 router.post('/login', login)
+router.post('/logout', logout)
 
 //redirects the user to the login page
 router.get('/signin', function(req,res){

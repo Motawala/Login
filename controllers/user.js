@@ -71,6 +71,7 @@ const login = async (req,res) =>{
         }else{
             await bcrypt.compare(password, findUser.password, function(err, result){
                 if(result){
+                    req.session.username = findUser.username;
                     req.session.isAuth = true;
                     return res.status(200).json({
                         success:true,
@@ -91,4 +92,20 @@ const login = async (req,res) =>{
 }
 
 
-module.exports = {signup, login}
+const logout = async (req, res) =>{
+    try{
+        req.session.destroy.username;
+        req.session.destroy()
+        return res.status(200).json({
+            success: true,
+            message:"logout successful"
+        })
+    }catch(err){
+        return res.status(400).json({
+            success:false,
+            message: "Error logging out"
+        })
+    }
+}
+
+module.exports = {signup, login, logout}

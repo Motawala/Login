@@ -1,0 +1,20 @@
+body{
+    background-attachment: fixed;
+    background-image: url("/Images/loginback.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logout-button{
+    width:15%;
+    height:30px;
+    border: 2px solid black;
+    border-radius: 2px;
+    color: blueviolet;
+    font-weight: bold;
+}
+
+.logout-button:hover{
+    background-color: beige;
+    cursor: pointer;
+}
