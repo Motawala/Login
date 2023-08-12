@@ -11,7 +11,7 @@ const session = require('express-session')
 const mongoDBsession = require('connect-mongodb-session')(session);
 //Import MongoClient and URI
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://kapatel:Kp2992002@cluster0.ygitbgz.mongodb.net/Testuser";
+const uri = "mongodb+srv://<username>:<password>@cluster0.ygitbgz.mongodb.net/Testuser";
 const userRoutes = require('./routes/user')
 require('dotenv').config();
 
